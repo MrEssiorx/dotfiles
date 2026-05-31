@@ -1,0 +1,32 @@
+[window]
+
+opacity = 0.95
+
+[font]
+
+normal = {family = "JetBrainsMonoNL Nerd Font Mono", style = "Regular"}
+# builtin_box_drawing = true
+size = 12
+offset = {x = 0, y = 0}
+builtin_box_drawing = false
+
+[colors]
+
+[colors.primary]
+
+foreground = "#d8d8d8"
+# Default: "#d8d8d8"
+
+background = "#050505"
+# Default: "#181818"
+
+# If this is not set, the color is automatically calculated based on the foreground color.
+# dim_foreground = "<string>"
+# Default: "#828482"
+
+# This color is only used when draw_bold_text_with_bright_colors is true.
+# If this is not set, the normal foreground will be used.
+# bright_foreground = "<string>"
+# Default: "None"
+
+
