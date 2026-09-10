@@ -214,7 +214,7 @@ endfunction
 
 function! ReadTemplate()
 	let ext = expand("%:e")
-	let template_file = expand("$HOME/templates/") . ext . "." . ext 
+	let template_file = expand("$HOME/Templates/") . ext . "." . ext 
 	if filereadable(template_file)
 		exec("0r " . template_file)
 	endif
@@ -241,12 +241,12 @@ command! -nargs=1 -complete=file Fork call CloneBufferToFile(<q-args>)
 
 autocmd BufNewFile *			:call ReadTemplate()
 
-command! Cpp	:call ClearFile() | 0r ~/templates/cpp.cpp	| 21
-command! Cpp2	:call ClearFile() | 0r ~/templates/cpp2.cpp	| 21
-command! Gen	:call ClearFile() | 0r ~/templates/gen.cpp
-command! Py		:call ClearFile() | 0r ~/templates/py.py
+command! Cpp	:call ClearFile() | 0r ~/Templates/cpp.cpp	| 21
+command! Cpp2	:call ClearFile() | 0r ~/Templates/cpp2.cpp	| 21
+command! Gen	:call ClearFile() | 0r ~/Templates/gen.cpp
+command! Py		:call ClearFile() | 0r ~/Templates/py.py
 " command! Canv	:call ClearFile() | 0r ~/templates/canv_cs.cs
 " command! Cs		:call ClearFile() | 0r ~/templates/cs.cs
 
-command! Rand	:r ~/templates/rand.cpp
-command! Sparse	:r ~/templates/sparse.cpp
+command! Rand	:r ~/Templates/rand.cpp
+command! Sparse	:r ~/Templates/sparse.cpp
