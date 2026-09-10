@@ -9,6 +9,8 @@ typedef unsigned long long	ull;
 typedef long double 		ld;
 // typedef __int128_t			lll;
 
+using namespace std;
+
 int main() {
 	FastIO;
 
