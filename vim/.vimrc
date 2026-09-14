@@ -16,6 +16,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'lervag/vimtex'
 Plug 'mboughaba/i3config.vim'
 " Plug 'christianfosli/wsl-copy'
+Plug 'jasonccox/vim-wayland-clipboard'
 
 Plug 'itchyny/lightline.vim'
 Plug 'Konfekt/FastFold'
