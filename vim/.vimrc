@@ -1,3 +1,9 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'cocopon/iceberg.vim'
@@ -139,7 +145,7 @@ function! SetupCpp()
 	nmap <F3> :w <bar> exe "!clear; echo \"Debug-Mode Compiling...\";
 				\ g++ -std=c++2a 
 				\ -DDEBUG -D_GLIBCXX_DEBUG
-				\ -fsanitize=address -fsanitize=undefined
+				\ -fsanitize=address,undefined -static-libasan -static-libubsan
 				\ -Wall -Wextra
 				\ -ulimit -g
 				\ % -o " . g:exe_file <CR>
